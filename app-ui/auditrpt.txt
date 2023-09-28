@@ -1,0 +1,30 @@
+# npm audit report
+
+glob-parent  <5.1.2
+Severity: high
+glob-parent before 5.1.2 vulnerable to Regular Expression Denial of Service in enclosure regex - https://github.com/advisories/GHSA-ww39-953v-wcq6
+fix available via `npm audit fix`
+node_modules/glob-parent
+  chokidar  1.0.0-rc1 - 2.1.8
+  Depends on vulnerable versions of glob-parent
+  node_modules/watchpack-chokidar2/node_modules/chokidar
+    watchpack-chokidar2  *
+    Depends on vulnerable versions of chokidar
+    node_modules/watchpack-chokidar2
+      watchpack  1.7.2 - 1.7.5
+      Depends on vulnerable versions of watchpack-chokidar2
+      node_modules/watchpack
+        webpack  4.44.0 - 4.47.0
+        Depends on vulnerable versions of watchpack
+        node_modules/webpack
+
+terser  <4.8.1
+Severity: high
+Terser insecure use of regular expressions leads to ReDoS - https://github.com/advisories/GHSA-4wf5-vphf-c2xc
+fix available via `npm audit fix`
+node_modules/terser
+
+6 high severity vulnerabilities
+
+To address all issues, run:
+  npm audit fix
